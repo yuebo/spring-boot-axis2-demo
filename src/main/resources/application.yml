@@ -1,0 +1,10 @@
+spring.freemarker.template-loader-path:
+  classpath: /templates
+spring.freemarker.suffix: .ftl
+spring:
+  freemarker:
+    cache: false
+
+spring.devtools.restart.additional-paths: src/main/resources
+
+spring.freemarker.settings.template_update_delay: 0

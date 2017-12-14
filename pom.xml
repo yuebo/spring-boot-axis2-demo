@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starters</artifactId>
+		<version>1.5.9.RELEASE</version>
+	</parent>
+
+	<groupId>com.github.eappcat</groupId>
+	<artifactId>spring-boot-axis2</artifactId>
+	<version>1.5.9-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>spring-boot-axis2</name>
+	<description>Sample for springboot with Axis2</description>
+
+	<properties>
+		<!-- Dependency versions -->
+		<!--<activation.version>1.1.1</activation.version>-->
+		<!--<axis.version>1.4</axis.version>-->
+		<!--<axis-schema.version>1.3</axis-schema.version>-->
+		<!--<axis-wsdl4j.version>1.5.1</axis-wsdl4j.version>-->
+		<axis2.version>1.7.7</axis2.version>
+		<!--<axis2-api.version>1.4.1</axis2-api.version>-->
+		<!--<woodstox-asl.version>4.0.0</woodstox-asl.version>-->
+		<!--<wsdl4j.version>1.6.3</wsdl4j.version>-->
+		<!--<xmlschema-core.version>2.0.2</xmlschema-core.version>-->
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+
+		<!-- Java Servlet API -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+
+		<!-- Axis2 : http://mvnrepository.com/artifact/org.apache.axis2 -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-http</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-local</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-spring</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-adb</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-jaxws</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+	</dependencies>
+
+
+</project>
