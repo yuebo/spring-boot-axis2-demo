@@ -31,7 +31,12 @@ public class  Axis2ServiceRegister {
         if(!repo.exists()){
             repo.mkdirs();
         }
+        loadModules();
         loadServices();
+    }
+
+    private void loadModules() {
+
     }
 
     private void loadServices() {

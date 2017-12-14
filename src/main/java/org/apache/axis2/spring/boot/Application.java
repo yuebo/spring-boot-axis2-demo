@@ -29,7 +29,6 @@ public class Application extends SpringBootServletInitializer {
         ServletRegistrationBean bean=new ServletRegistrationBean(new AxisServlet(), "/services/*");
         bean.setLoadOnStartup(1);
         bean.addInitParameter("axis2.repository.path",register.getRepoPath());
-//        bean.addInitParameter("axis2.repository.path","/Users/yuebo/projects/eappcat/axis2/");
         bean.addInitParameter("axis2.xml.url", new ClassPathResource("axis2.xml").getURL().toString());
 
         return bean;
