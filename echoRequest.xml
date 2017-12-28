@@ -1,0 +1,9 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header/>
+    <soap:Body xmlns:sp="http://sample2.services.boot.spring.axis2.apache.org">
+        <sp:echoRequest>
+            <sp:arg>aaaaa</sp:arg>
+        </sp:echoRequest>
+
+    </soap:Body>
+</soap:Envelope>

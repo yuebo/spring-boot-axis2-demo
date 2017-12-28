@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class JspController {
     private Logger logger= LoggerFactory.getLogger(JspController.class);
     @RequestMapping("/WEB-INF/views/listServices.jsp")
-    public String jsp(HttpServletRequest request, Model model){
+    public String services(HttpServletRequest request, Model model){
         //mockup the jsp
         logger.info("services map {}",request.getAttribute(Constants.SERVICE_MAP));
         model.addAttribute("request",request);

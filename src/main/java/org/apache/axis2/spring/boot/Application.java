@@ -18,12 +18,15 @@ import java.io.IOException;
  */
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
+
+    @Autowired Axis2ServiceRegister register;
+
     public static void main(String[] args) {
         SpringApplication.run(Application.class,args);
     }
 
 
-    public @Bean ServletRegistrationBean servletRegistration(@Autowired Axis2ServiceRegister register) throws IOException {
+    public @Bean ServletRegistrationBean servletRegistration() throws IOException {
 
         //load the service
         ServletRegistrationBean bean=new ServletRegistrationBean(new AxisServlet(), "/services/*");

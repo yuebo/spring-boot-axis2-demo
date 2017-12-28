@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 访问地址中的访问那个webservice的名字 -->
+<serviceGroup>
+    <service name="TestWSService">
+        <description>Spring 整合例子 </description>
+        <parameter name="ServiceObjectSupplier">
+            org.apache.axis2.extensions.spring.receivers.SpringServletContextObjectSupplier
+        </parameter>
+        <!-- 配置在applicationContext中配置的bean,,这里的值域bean中的id事一样的，否则就报错找不到bean错 -->
+
+        <parameter name="SpringBeanName">testService</parameter>
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+            <messageReceiver  mep="http://www.w3.org/ns/wsdl/in-out"  class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </messageReceivers>
+    </service>
+</serviceGroup>

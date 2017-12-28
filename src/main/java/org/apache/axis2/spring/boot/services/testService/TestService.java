@@ -1,4 +1,4 @@
-package org.apache.axis2.spring.boot;
+package org.apache.axis2.spring.boot.services.testService;
 
 import org.springframework.stereotype.Component;
 

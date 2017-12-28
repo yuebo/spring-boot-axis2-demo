@@ -36,12 +36,21 @@ public class  Axis2ServiceRegister {
     }
 
     private void loadModules() {
+        try {
+            this.registerModuleMar(new ClassPathResource("/modules/addressing-1.7.7.mar"),"addressing");
+            this.registerModuleMar(new ClassPathResource("/modules/rampart-1.7.1.mar"),"rampart");
+            this.registerModuleMar(new ClassPathResource("/modules/rahas-1.7.1.mar"),"rahas");
+
+        } catch (IOException e) {
+            logger.error("error when load modules: {}",e);
+        }
 
     }
 
     private void loadServices() {
         try {
-            registerServiceXml(new ClassPathResource("services.xml"),"test");
+            registerServiceXml(new ClassPathResource("testService/services.xml"),"testServices");
+            registerServiceXml(new ClassPathResource("sample2/services.xml"),"simpleService");
             registerServiceAar(new ClassPathResource("version-1.7.7.aar"),"version");
         } catch (IOException e) {
             logger.error("error when load service: {}",e);
@@ -67,7 +76,7 @@ public class  Axis2ServiceRegister {
         try{
             File serviceDir=new File(repo,"services/"+serviceName+"/META-INF");
             serviceDir.mkdirs();
-            fileOutputStream=new FileOutputStream(new File(serviceDir,"services.xml"));
+            fileOutputStream=new FileOutputStream(new File(serviceDir, "services.xml"));
             IOUtils.copy(resource.getInputStream(),fileOutputStream);
         }finally {
             IOUtils.closeQuietly(fileOutputStream);
